@@ -137,7 +137,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_gui_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/gui.jsx */ "./src/containers/gui.jsx");
 /* harmony import */ var _lib_hash_parser_hoc_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/hash-parser-hoc.jsx */ "./src/lib/hash-parser-hoc.jsx");
 /* harmony import */ var _lib_log_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/log.js */ "./src/lib/log.js");
+/* harmony import */ var _lib_message_box_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/message-box.js */ "./src/lib/message-box.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 
 
 
@@ -177,6 +179,14 @@ var handleTelemetryModalOptIn = function handleTelemetryModalOptIn() {
 
 var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
   Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User opted out of telemetry');
+};
+
+var handleShowMessageBox = function handleShowMessageBox(type, message) {
+  if (type === _lib_message_box_js__WEBPACK_IMPORTED_MODULE_7__["default"].confirm) {
+    return confirm(message); // eslint-disable-line no-alert
+  } else if (type === _lib_message_box_js__WEBPACK_IMPORTED_MODULE_7__["default"].alert) {
+    return alert(message); // eslint-disable-line no-alert
+  }
 };
 /*
  * Render the GUI playground. This is a separate function because importing anything
@@ -222,14 +232,16 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
     onClickCheckUpdate: onClickCheckUpdate,
     onClickUpgrade: onClickUpgrade,
     onClickClearCache: onClickClearCache,
-    onClickInstallDriver: onClickInstallDriver
+    onClickInstallDriver: onClickInstallDriver,
+    onShowMessageBox: handleShowMessageBox
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
     canEditTitle: true,
     backpackVisible: true,
     showComingSoon: true,
     backpackHost: backpackHost,
     canSave: false,
-    onClickLogo: onClickLogo
+    onClickLogo: onClickLogo,
+    onShowMessageBox: handleShowMessageBox
   }), appTarget);
 });
 
