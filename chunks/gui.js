@@ -153,12 +153,20 @@ var onClickLogo = function onClickLogo() {
   window.location = 'https://irobochakra.com/';
 };
 
+var onClickCheckMainUpdate = function onClickCheckMainUpdate() {
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click check main update');
+};
+
 var onClickCheckUpdate = function onClickCheckUpdate() {
   Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click check update');
 };
 
 var onClickUpgrade = function onClickUpgrade() {
   Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click upgrade');
+};
+
+var onClickMainUpgrade = function onClickMainUpgrade() {
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click Main upgrade');
 };
 
 var onClickClearCache = function onClickClearCache() {
@@ -229,7 +237,9 @@ var handleShowMessageBox = function handleShowMessageBox(type, message) {
     onTelemetryModalCancel: handleTelemetryModalCancel,
     onTelemetryModalOptIn: handleTelemetryModalOptIn,
     onTelemetryModalOptOut: handleTelemetryModalOptOut,
+    onClickCheckMainUpdate: onClickCheckMainUpdate,
     onClickCheckUpdate: onClickCheckUpdate,
+    onClickMainUpgrade: onClickMainUpgrade,
     onClickUpgrade: onClickUpgrade,
     onClickClearCache: onClickClearCache,
     onClickInstallDriver: onClickInstallDriver,
