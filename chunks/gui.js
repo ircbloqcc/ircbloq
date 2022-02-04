@@ -189,6 +189,23 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
   Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User opted out of telemetry');
 };
 
+var onClickAbout = [{
+  title: 'About',
+  onClick: function onClick() {
+    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('About');
+  }
+}, {
+  title: 'Privacy Policy',
+  onClick: function onClick() {
+    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('Privacy Policy');
+  }
+}, {
+  title: 'Data Settings',
+  onClick: function onClick() {
+    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('Data Settings');
+  }
+}];
+
 var handleShowMessageBox = function handleShowMessageBox(type, message) {
   if (type === _lib_message_box_js__WEBPACK_IMPORTED_MODULE_7__["default"].confirm) {
     return confirm(message); // eslint-disable-line no-alert
@@ -232,6 +249,7 @@ var handleShowMessageBox = function handleShowMessageBox(type, message) {
   simulateScratchDesktop ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
     canEditTitle: true,
     isScratchDesktop: true,
+    onClickAbout: onClickAbout,
     showTelemetryModal: true,
     canSave: false,
     onTelemetryModalCancel: handleTelemetryModalCancel,
