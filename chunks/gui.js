@@ -133,12 +133,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
-/* harmony import */ var _lib_app_state_hoc_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/app-state-hoc.jsx */ "./src/lib/app-state-hoc.jsx");
-/* harmony import */ var _containers_gui_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/gui.jsx */ "./src/containers/gui.jsx");
-/* harmony import */ var _lib_hash_parser_hoc_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/hash-parser-hoc.jsx */ "./src/lib/hash-parser-hoc.jsx");
-/* harmony import */ var _lib_log_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/log.js */ "./src/lib/log.js");
-/* harmony import */ var _lib_message_box_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/message-box.js */ "./src/lib/message-box.js");
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+/* harmony import */ var _lib_app_state_hoc_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lib/app-state-hoc.jsx */ "./src/lib/app-state-hoc.jsx");
+/* harmony import */ var _containers_gui_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../containers/gui.jsx */ "./src/containers/gui.jsx");
+/* harmony import */ var _lib_hash_parser_hoc_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/hash-parser-hoc.jsx */ "./src/lib/hash-parser-hoc.jsx");
+/* harmony import */ var _lib_log_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/log.js */ "./src/lib/log.js");
+/* harmony import */ var _lib_message_box_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/message-box.js */ "./src/lib/message-box.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 
 
 
@@ -153,63 +155,68 @@ var onClickLogo = function onClickLogo() {
   window.location = 'https://irobochakra.com/';
 };
 
-var onClickCheckMainUpdate = function onClickCheckMainUpdate() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click check main update');
-};
-
 var onClickCheckUpdate = function onClickCheckUpdate() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click check update');
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('User click check update');
 };
 
-var onClickUpgrade = function onClickUpgrade() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click upgrade');
+var onClickUpdate = function onClickUpdate() {
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('User click update');
 };
 
-var onClickMainUpgrade = function onClickMainUpgrade() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click Main upgrade');
+var onAbortUpdate = function onAbortUpdate() {
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('User click abort update');
 };
 
 var onClickClearCache = function onClickClearCache() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click clear cahce');
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('User click clear cahce');
 };
 
 var onClickInstallDriver = function onClickInstallDriver() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click install driver');
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('User click install driver');
 };
 
 var handleTelemetryModalCancel = function handleTelemetryModalCancel() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User canceled telemetry modal');
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('User canceled telemetry modal');
 };
 
 var handleTelemetryModalOptIn = function handleTelemetryModalOptIn() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User opted into telemetry');
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('User opted into telemetry');
 };
 
 var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User opted out of telemetry');
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('User opted out of telemetry');
 };
 
 var onClickAbout = [{
-  title: 'About',
+  title: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_3__["FormattedMessage"], {
+    defaultMessage: "About",
+    id: "gui.desktopMenuBar.about"
+  }),
   onClick: function onClick() {
-    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('About');
+    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('About');
   }
 }, {
-  title: 'Privacy Policy',
+  title: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_3__["FormattedMessage"], {
+    defaultMessage: "Privacy policy",
+    id: "gui.menuBar.privacyPolicy"
+  }),
   onClick: function onClick() {
-    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('Privacy Policy');
+    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('Privacy Policy');
   }
 }, {
-  title: 'Data Settings',
+  title: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_3__["FormattedMessage"], {
+    defaultMessage: "Data settings",
+    id: "gui.menuBar.dataSettings"
+  }),
   onClick: function onClick() {
-    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('Data Settings');
+    return Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_7__["default"])('Data Settings');
   }
 }];
 
 var handleShowMessageBox = function handleShowMessageBox(type, message) {
-  if (type === _lib_message_box_js__WEBPACK_IMPORTED_MODULE_7__["default"].confirm) {
+  if (type === _lib_message_box_js__WEBPACK_IMPORTED_MODULE_8__["default"].confirm) {
     return confirm(message); // eslint-disable-line no-alert
-  } else if (type === _lib_message_box_js__WEBPACK_IMPORTED_MODULE_7__["default"].alert) {
+  } else if (type === _lib_message_box_js__WEBPACK_IMPORTED_MODULE_8__["default"].alert) {
     return alert(message); // eslint-disable-line no-alert
   }
 };
@@ -221,11 +228,11 @@ var handleShowMessageBox = function handleShowMessageBox(type, message) {
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (appTarget) {
-  _containers_gui_jsx__WEBPACK_IMPORTED_MODULE_4__["default"].setAppElement(appTarget); // note that redux's 'compose' function is just being used as a general utility to make
+  _containers_gui_jsx__WEBPACK_IMPORTED_MODULE_5__["default"].setAppElement(appTarget); // note that redux's 'compose' function is just being used as a general utility to make
   // the hierarchy of HOC constructor calls clearer here; it has nothing to do with redux's
   // ability to compose reducers.
 
-  var WrappedGui = Object(redux__WEBPACK_IMPORTED_MODULE_2__["compose"])(_lib_app_state_hoc_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], _lib_hash_parser_hoc_jsx__WEBPACK_IMPORTED_MODULE_5__["default"])(_containers_gui_jsx__WEBPACK_IMPORTED_MODULE_4__["default"]); // TODO a hack for testing the backpack, allow backpack host to be set by url param
+  var WrappedGui = Object(redux__WEBPACK_IMPORTED_MODULE_2__["compose"])(_lib_app_state_hoc_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], _lib_hash_parser_hoc_jsx__WEBPACK_IMPORTED_MODULE_6__["default"])(_containers_gui_jsx__WEBPACK_IMPORTED_MODULE_5__["default"]); // TODO a hack for testing the backpack, allow backpack host to be set by url param
 
   var backpackHostMatches = window.location.href.match(/[?&]backpack_host=([^&]*)&?/);
   var backpackHost = backpackHostMatches ? backpackHostMatches[1] : null;
@@ -255,10 +262,9 @@ var handleShowMessageBox = function handleShowMessageBox(type, message) {
     onTelemetryModalCancel: handleTelemetryModalCancel,
     onTelemetryModalOptIn: handleTelemetryModalOptIn,
     onTelemetryModalOptOut: handleTelemetryModalOptOut,
-    onClickCheckMainUpdate: onClickCheckMainUpdate,
+    onAbortUpdate: onAbortUpdate,
     onClickCheckUpdate: onClickCheckUpdate,
-    onClickMainUpgrade: onClickMainUpgrade,
-    onClickUpgrade: onClickUpgrade,
+    onClickUpdate: onClickUpdate,
     onClickClearCache: onClickClearCache,
     onClickInstallDriver: onClickInstallDriver,
     onShowMessageBox: handleShowMessageBox
